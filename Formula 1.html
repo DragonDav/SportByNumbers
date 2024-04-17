@@ -296,6 +296,27 @@ body {
   </p>
      </div>
   </main>
+        <h1>¿Qué equipo ganara la F1?</h1>
+    <button onclick="votar(1)">Verstappen</button>
+    <button onclick="votar(2)">Fernando Alonso</button>
+    <p>Resultados:</p>
+    <p id="resultadoA">Verstappen: 0 votos</p>
+    <p id="resultadoB">Fernando Alonso: 0 votos</p>
+
+    <script>
+        let votosA = 0;
+        let votosB = 0;
+
+        function votar(opcion) {
+            if (opcion === 1) {
+                votosA++;
+                document.getElementById('resultadoA').innerText = `Verstappen: ${votosA} votos`;
+            } else if (opcion === 2) {
+                votosB++;
+                document.getElementById('resultadoB').innerText = `Fernando Alonso: ${votosB} votos`;
+            }
+        }
+    </script>
    </body>
   
 
