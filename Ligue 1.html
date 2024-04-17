@@ -116,6 +116,27 @@ body {
 </p>
 </div>
 </main>
+          <h1>¿Qué equipo ganara la Ligue 1?</h1>
+    <button onclick="votar(1)">PSG</button>
+    <button onclick="votar(2)">Niza</button>
+    <p>Resultados:</p>
+    <p id="resultadoA">PSG: 0 votos</p>
+    <p id="resultadoB">Niza: 0 votos</p>
+
+    <script>
+        let votosA = 0;
+        let votosB = 0;
+
+        function votar(opcion) {
+            if (opcion === 1) {
+                votosA++;
+                document.getElementById('resultadoA').innerText = `PSG: ${votosA} votos`;
+            } else if (opcion === 2) {
+                votosB++;
+                document.getElementById('resultadoB').innerText = `Niza: ${votosB} votos`;
+            }
+        }
+    </script>
 </body>
  
  
