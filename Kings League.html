@@ -81,6 +81,27 @@
 </p>
 </div>
 </main>
+          <h1>¿Qué equipo ganara la Kings League?</h1>
+    <button onclick="votar(1)">Aniquiladores FC</button>
+    <button onclick="votar(2)">Saiyans FC</button>
+    <p>Resultados:</p>
+    <p id="resultadoA">Aniquiladores FC: 0 votos</p>
+    <p id="resultadoB">Saiyans FC: 0 votos</p>
+
+    <script>
+        let votosA = 0;
+        let votosB = 0;
+
+        function votar(opcion) {
+            if (opcion === 1) {
+                votosA++;
+                document.getElementById('resultadoA').innerText = `Aniquiladores FC: ${votosA} votos`;
+            } else if (opcion === 2) {
+                votosB++;
+                document.getElementById('resultadoB').innerText = `Saiyans FC: ${votosB} votos`;
+            }
+        }
+    </script>
 </body>
  
  
