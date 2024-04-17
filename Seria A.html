@@ -116,6 +116,27 @@ body {
 </p>
 </div>
 </main>
+          <h1>¿Qué equipo ganara la Serie A?</h1>
+    <button onclick="votar(1)">Inter de Milan</button>
+    <button onclick="votar(2)">Juventus</button>
+    <p>Resultados:</p>
+    <p id="resultadoA">Inter de Milan: 0 votos</p>
+    <p id="resultadoB">Juventus: 0 votos</p>
+
+    <script>
+        let votosA = 0;
+        let votosB = 0;
+
+        function votar(opcion) {
+            if (opcion === 1) {
+                votosA++;
+                document.getElementById('resultadoA').innerText = `Inter de Milan: ${votosA} votos`;
+            } else if (opcion === 2) {
+                votosB++;
+                document.getElementById('resultadoB').innerText = `Juventus: ${votosB} votos`;
+            }
+        }
+    </script>
 </body>
  
  
