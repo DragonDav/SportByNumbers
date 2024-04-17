@@ -116,6 +116,27 @@ body {
 </p>
 </div>
 </main>
+          <h1>¿Qué equipo ganara la Premier League?</h1>
+    <button onclick="votar(1)">Manchester City</button>
+    <button onclick="votar(2)">Liverpool</button>
+    <p>Resultados:</p>
+    <p id="resultadoA">Manchester City: 0 votos</p>
+    <p id="resultadoB">Liverpool: 0 votos</p>
+
+    <script>
+        let votosA = 0;
+        let votosB = 0;
+
+        function votar(opcion) {
+            if (opcion === 1) {
+                votosA++;
+                document.getElementById('resultadoA').innerText = `Manchester City: ${votosA} votos`;
+            } else if (opcion === 2) {
+                votosB++;
+                document.getElementById('resultadoB').innerText = `Liverpool: ${votosB} votos`;
+            }
+        }
+    </script>
 </body>
  
  
