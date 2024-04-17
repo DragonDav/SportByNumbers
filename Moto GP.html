@@ -270,6 +270,27 @@ body {
   </p>
      </div>
   </main>
+        <h1>¿Qué equipo ganara la Moto GP?</h1>
+    <button onclick="votar(1)">Francesco Bagnia</button>
+    <button onclick="votar(2)">Jorge Martín</button>
+    <p>Resultados:</p>
+    <p id="resultadoA">Francesco Bagnia: 0 votos</p>
+    <p id="resultadoB">Jorge Martín: 0 votos</p>
+
+    <script>
+        let votosA = 0;
+        let votosB = 0;
+
+        function votar(opcion) {
+            if (opcion === 1) {
+                votosA++;
+                document.getElementById('resultadoA').innerText = `Frances Bagnia: ${votosA} votos`;
+            } else if (opcion === 2) {
+                votosB++;
+                document.getElementById('resultadoB').innerText = `Jorge Martín: ${votosB} votos`;
+            }
+        }
+    </script>
    </body>
   
 
