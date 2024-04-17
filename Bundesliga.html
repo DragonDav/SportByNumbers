@@ -109,6 +109,27 @@ body {
 </p>
 </div>
 </main>
+          <h1>¿Qué equipo ganara la Bundesliga?</h1>
+    <button onclick="votar(1)">Leverkusen</button>
+    <button onclick="votar(2)">Bayer de munich</button>
+    <p>Resultados:</p>
+    <p id="resultadoA">Leverkusen: 0 votos</p>
+    <p id="resultadoB">Bayer de Munich: 0 votos</p>
+
+    <script>
+        let votosA = 0;
+        let votosB = 0;
+
+        function votar(opcion) {
+            if (opcion === 1) {
+                votosA++;
+                document.getElementById('resultadoA').innerText = `Leverkusen: ${votosA} votos`;
+            } else if (opcion === 2) {
+                votosB++;
+                document.getElementById('resultadoB').innerText = `Bayer de Munich: ${votosB} votos`;
+            }
+        }
+    </script>
 </body>
  
  
