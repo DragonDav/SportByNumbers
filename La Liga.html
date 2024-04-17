@@ -116,5 +116,26 @@ body {
 </p>
 </div>
 </main>
+          <h1>¿Qué equipo ganara La Liga?</h1>
+    <button onclick="votar(1)">Girona</button>
+    <button onclick="votar(2)">Real Madrid</button>
+    <p>Resultados:</p>
+    <p id="resultadoA">Girona: 0 votos</p>
+    <p id="resultadoB">Real Madrid: 0 votos</p>
+
+    <script>
+        let votosA = 0;
+        let votosB = 0;
+
+        function votar(opcion) {
+            if (opcion === 1) {
+                votosA++;
+                document.getElementById('resultadoA').innerText = `Girona: ${votosA} votos`;
+            } else if (opcion === 2) {
+                votosB++;
+                document.getElementById('resultadoB').innerText = `Real Madrdi: ${votosB} votos`;
+            }
+        }
+    </script>
 </body> 
 </html>
